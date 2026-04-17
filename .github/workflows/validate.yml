@@ -1,0 +1,21 @@
+name: Validate COBOL
+
+on:
+  push:
+    paths:
+      - 'programs/**/*.cbl'
+  pull_request:
+    paths:
+      - 'programs/**/*.cbl'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install GnuCOBOL
+        run: sudo apt-get install -y gnucobol
+
+      - name: Syntax check all COBOL files
+        run: make check-all
