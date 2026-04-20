@@ -1,0 +1,8 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COPY-DEMO.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-MSG PIC X(20) VALUE "Copy not testable".
+       PROCEDURE DIVISION.
+           DISPLAY WS-MSG
+           STOP RUN.
