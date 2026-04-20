@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PIC-DECIMAL.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-PRICE           PIC 9(4)V99 VALUE 123.45.
+       01 WS-RATE            PIC 9(2)V99 VALUE 7.50.
+
+       PROCEDURE DIVISION.
+           DISPLAY "Price: " WS-PRICE
+           DISPLAY "Rate: " WS-RATE
+           STOP RUN.
