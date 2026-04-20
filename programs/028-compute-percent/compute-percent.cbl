@@ -1,0 +1,16 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COMPUTE-PERCENT.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-PRICE  PIC 9(5)V99 VALUE 1000.00.
+       01 WS-TAX    PIC 9(5)V99 VALUE 0.
+       01 WS-TOTAL  PIC 9(5)V99 VALUE 0.
+
+       PROCEDURE DIVISION.
+           COMPUTE WS-TAX   = WS-PRICE * 0.18
+           COMPUTE WS-TOTAL = WS-PRICE + WS-TAX
+           DISPLAY "Price: " WS-PRICE
+           DISPLAY "Tax:   " WS-TAX
+           DISPLAY "Total: " WS-TOTAL
+           STOP RUN.
