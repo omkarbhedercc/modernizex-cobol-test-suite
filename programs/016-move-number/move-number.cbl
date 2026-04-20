@@ -1,0 +1,11 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MOVE-NUMBER.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-COUNT           PIC 9(4).
+
+       PROCEDURE DIVISION.
+           MOVE 1234 TO WS-COUNT
+           DISPLAY "Count: " WS-COUNT
+           STOP RUN.
