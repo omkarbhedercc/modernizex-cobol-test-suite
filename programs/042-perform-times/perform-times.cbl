@@ -1,0 +1,15 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PERFORM-TIMES.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-COUNT PIC 9(1) VALUE 0.
+
+       PROCEDURE DIVISION.
+           PERFORM SHOW-PARA 3 TIMES
+           DISPLAY "Done"
+           STOP RUN.
+
+       SHOW-PARA.
+           ADD 1 TO WS-COUNT
+           DISPLAY "Call " WS-COUNT.

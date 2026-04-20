@@ -1,0 +1,14 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PERFORM-VARYING.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-I PIC 9(2) VALUE 0.
+
+       PROCEDURE DIVISION.
+           PERFORM VARYING WS-I FROM 1 BY 2
+               UNTIL WS-I > 10
+               DISPLAY "I=" WS-I
+           END-PERFORM
+           DISPLAY "Done"
+           STOP RUN.
