@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MOVE-ZEROS.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-COUNTER         PIC 9(5) VALUE 12345.
+
+       PROCEDURE DIVISION.
+           DISPLAY "Before: " WS-COUNTER
+           MOVE ZEROS TO WS-COUNTER
+           DISPLAY "After:  " WS-COUNTER
+           STOP RUN.
