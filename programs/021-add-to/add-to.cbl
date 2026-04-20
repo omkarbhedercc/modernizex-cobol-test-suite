@@ -1,0 +1,15 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ADD-TO.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-TOTAL   PIC 9(4) VALUE 100.
+       01 WS-AMOUNT  PIC 9(4) VALUE 25.
+
+       PROCEDURE DIVISION.
+           DISPLAY "Before: " WS-TOTAL
+           ADD WS-AMOUNT TO WS-TOTAL
+           DISPLAY "After:  " WS-TOTAL
+           ADD 50 TO WS-TOTAL
+           DISPLAY "Final:  " WS-TOTAL
+           STOP RUN.
