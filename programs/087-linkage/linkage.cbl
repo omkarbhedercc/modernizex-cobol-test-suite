@@ -1,0 +1,10 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. LINKAGE-DEMO.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-VAL PIC 9(3) VALUE 100.
+       PROCEDURE DIVISION.
+           DISPLAY "Before: " WS-VAL
+           CALL "ADD-TEN" USING WS-VAL
+           DISPLAY "After:  " WS-VAL
+           STOP RUN.
