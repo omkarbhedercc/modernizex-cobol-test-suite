@@ -1,0 +1,8 @@
+IDENTIFICATION DIVISION.
+PROGRAM-ID. GOBACK-DEMO.
+
+PROCEDURE DIVISION.
+    DISPLAY "Before GOBACK".
+    DISPLAY "Returning to caller".
+    GOBACK.
+    DISPLAY "Unreachable after GOBACK".
