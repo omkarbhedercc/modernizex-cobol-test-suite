@@ -1,0 +1,17 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. REDEFINES-DEMO.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-DATE-STR PIC X(8) VALUE "20260420".
+       01 WS-DATE-NUM REDEFINES WS-DATE-STR.
+          05 WS-YEAR  PIC 9(4).
+          05 WS-MONTH PIC 9(2).
+          05 WS-DAY   PIC 9(2).
+
+       PROCEDURE DIVISION.
+           DISPLAY "Full:  " WS-DATE-STR
+           DISPLAY "Year:  " WS-YEAR
+           DISPLAY "Month: " WS-MONTH
+           DISPLAY "Day:   " WS-DAY
+           STOP RUN.
