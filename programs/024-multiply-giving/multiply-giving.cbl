@@ -1,0 +1,15 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. MULTIPLY-GIVING.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-PRICE     PIC 9(4) VALUE 25.
+       01 WS-QTY       PIC 9(3) VALUE 12.
+       01 WS-TOTAL     PIC 9(6) VALUE 0.
+
+       PROCEDURE DIVISION.
+           MULTIPLY WS-PRICE BY WS-QTY GIVING WS-TOTAL
+           DISPLAY "Price: " WS-PRICE
+           DISPLAY "Qty:   " WS-QTY
+           DISPLAY "Total: " WS-TOTAL
+           STOP RUN.
