@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. UNSTRING-CSV.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-INPUT PIC X(30) VALUE "Alice,30,NYC".
+       01 WS-NAME  PIC X(10) VALUE SPACES.
+       01 WS-AGE   PIC X(5)  VALUE SPACES.
+       01 WS-CITY  PIC X(10) VALUE SPACES.
+
+       PROCEDURE DIVISION.
+           UNSTRING WS-INPUT DELIMITED BY ","
+               INTO WS-NAME WS-AGE WS-CITY
+           END-UNSTRING
+           DISPLAY "Name: [" WS-NAME "]"
+           DISPLAY "Age:  [" WS-AGE "]"
+           DISPLAY "City: [" WS-CITY "]"
+           STOP RUN.

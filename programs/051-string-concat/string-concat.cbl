@@ -1,0 +1,16 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. STRING-CONCAT.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-FIRST  PIC X(5) VALUE "Hello".
+       01 WS-SECOND PIC X(6) VALUE " World".
+       01 WS-RESULT PIC X(20) VALUE SPACES.
+
+       PROCEDURE DIVISION.
+           STRING WS-FIRST DELIMITED BY SIZE
+                  WS-SECOND DELIMITED BY SIZE
+                  INTO WS-RESULT
+           END-STRING
+           DISPLAY "Result: [" WS-RESULT "]"
+           STOP RUN.

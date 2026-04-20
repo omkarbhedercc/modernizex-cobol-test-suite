@@ -1,0 +1,13 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. INSPECT-TALLY.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-STR   PIC X(15) VALUE "Hello World".
+       01 WS-COUNT PIC 9(3)  VALUE 0.
+
+       PROCEDURE DIVISION.
+           INSPECT WS-STR TALLYING WS-COUNT
+               FOR ALL "l"
+           DISPLAY "Count of l: " WS-COUNT
+           STOP RUN.
