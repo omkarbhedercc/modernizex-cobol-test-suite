@@ -1,0 +1,11 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. INSPECT-REPLACE.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-STR PIC X(15) VALUE "Hello World".
+
+       PROCEDURE DIVISION.
+           INSPECT WS-STR REPLACING ALL "l" BY "L"
+           DISPLAY "Result: [" WS-STR "]"
+           STOP RUN.
