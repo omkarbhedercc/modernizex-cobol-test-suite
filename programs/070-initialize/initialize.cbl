@@ -1,0 +1,15 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. INITIALIZE-DEMO.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-REC.
+          05 WS-NAME  PIC X(10) VALUE "John Doe  ".
+          05 WS-AGE   PIC 9(3)  VALUE 025.
+          05 WS-SCORE PIC 9(3)  VALUE 095.
+
+       PROCEDURE DIVISION.
+           DISPLAY "Before: " WS-NAME WS-AGE WS-SCORE
+           INITIALIZE WS-REC
+           DISPLAY "After:  " WS-NAME WS-AGE WS-SCORE
+           STOP RUN.
