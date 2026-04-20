@@ -1,0 +1,24 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. OPEN-OUTPUT.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT OUT-FILE ASSIGN TO "output.dat"
+               ORGANIZATION IS LINE SEQUENTIAL.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD OUT-FILE.
+       01 OUT-REC PIC X(20).
+
+       WORKING-STORAGE SECTION.
+       01 WS-MSG PIC X(20) VALUE "Hello from file!".
+
+       PROCEDURE DIVISION.
+           OPEN OUTPUT OUT-FILE
+           MOVE WS-MSG TO OUT-REC
+           WRITE OUT-REC
+           CLOSE OUT-FILE
+           DISPLAY "File written"
+           STOP RUN.

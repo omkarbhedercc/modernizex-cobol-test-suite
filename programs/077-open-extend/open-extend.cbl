@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. OPEN-EXTEND.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT OUT-FILE ASSIGN TO "append.dat"
+               ORGANIZATION IS LINE SEQUENTIAL.
+       DATA DIVISION.
+       FILE SECTION.
+       FD OUT-FILE.
+       01 OUT-REC PIC X(20).
+       PROCEDURE DIVISION.
+           OPEN EXTEND OUT-FILE
+           MOVE "Appended line" TO OUT-REC
+           WRITE OUT-REC
+           CLOSE OUT-FILE
+           DISPLAY "Appended"
+           STOP RUN.

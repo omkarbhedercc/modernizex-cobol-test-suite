@@ -1,0 +1,23 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. WRITE-ADVANCING.
+
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT RPT-FILE ASSIGN TO "report.dat"
+               ORGANIZATION IS LINE SEQUENTIAL.
+
+       DATA DIVISION.
+       FILE SECTION.
+       FD RPT-FILE.
+       01 RPT-REC PIC X(30).
+
+       PROCEDURE DIVISION.
+           OPEN OUTPUT RPT-FILE
+           MOVE "Header Line" TO RPT-REC
+           WRITE RPT-REC AFTER ADVANCING 2 LINES
+           MOVE "Detail Line" TO RPT-REC
+           WRITE RPT-REC AFTER ADVANCING 1 LINE
+           CLOSE RPT-FILE
+           DISPLAY "Report written"
+           STOP RUN.

@@ -1,0 +1,18 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. REWRITE-DEMO.
+       ENVIRONMENT DIVISION.
+       INPUT-OUTPUT SECTION.
+       FILE-CONTROL.
+           SELECT IO-FILE ASSIGN TO "data.dat"
+               ORGANIZATION IS LINE SEQUENTIAL.
+       DATA DIVISION.
+       FILE SECTION.
+       FD IO-FILE.
+       01 IO-REC PIC X(20).
+       PROCEDURE DIVISION.
+           OPEN OUTPUT IO-FILE
+           MOVE "Original" TO IO-REC
+           WRITE IO-REC
+           CLOSE IO-FILE
+           DISPLAY "Written"
+           STOP RUN.
