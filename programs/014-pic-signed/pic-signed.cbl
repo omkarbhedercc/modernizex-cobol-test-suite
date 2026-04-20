@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PIC-SIGNED.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-BALANCE         PIC S9(4) VALUE -250.
+       01 WS-PROFIT          PIC S9(3) VALUE 75.
+
+       PROCEDURE DIVISION.
+           DISPLAY "Balance: " WS-BALANCE
+           DISPLAY "Profit: " WS-PROFIT
+           STOP RUN.
