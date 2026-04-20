@@ -1,0 +1,10 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ACCEPT-STRING.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-NAME PIC X(20) VALUE SPACES.
+       PROCEDURE DIVISION.
+           DISPLAY "Enter name: "
+           ACCEPT WS-NAME
+           DISPLAY "Hello, " WS-NAME
+           STOP RUN.
