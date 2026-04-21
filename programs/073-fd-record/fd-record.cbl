@@ -10,19 +10,14 @@
        DATA DIVISION.
        FILE SECTION.
        FD EMP-FILE.
-       01 EMP-REC.
-          05 EMP-ID   PIC 9(5).
-          05 EMP-NAME PIC X(10).
-          05 EMP-SAL  PIC 9(7).
+       01 EMP-REC PIC X(22).
 
        WORKING-STORAGE SECTION.
-       01 WS-MSG PIC X(30) VALUE SPACES.
+       01 WS-DATA PIC X(22) VALUE "10001John Doe  0050000".
 
        PROCEDURE DIVISION.
            OPEN OUTPUT EMP-FILE
-           MOVE 10001 TO EMP-ID
-           MOVE "John Doe  " TO EMP-NAME
-           MOVE 0050000 TO EMP-SAL
+           MOVE WS-DATA TO EMP-REC
            WRITE EMP-REC
            CLOSE EMP-FILE
            DISPLAY "Record written"
