@@ -8,6 +8,7 @@
              10 WS-COL PIC 9(1) OCCURS 3 TIMES.
        01 WS-I PIC 9(1) VALUE 0.
        01 WS-J PIC 9(1) VALUE 0.
+       01 WS-V PIC 9(1) VALUE 0.
 
        PROCEDURE DIVISION.
            MOVE 1 TO WS-COL(1, 1)
@@ -20,8 +21,8 @@
                UNTIL WS-I > 2
                PERFORM VARYING WS-J FROM 1 BY 1
                    UNTIL WS-J > 3
-                   DISPLAY "M(" WS-I "," WS-J ")="
-                       WS-COL(WS-I, WS-J)
+                   MOVE WS-COL(WS-I, WS-J) TO WS-V
+                   DISPLAY "M(" WS-I "," WS-J ")=" WS-V
                END-PERFORM
            END-PERFORM
            STOP RUN.
