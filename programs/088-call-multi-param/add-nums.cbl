@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ADD-NUMS.
+
+       DATA DIVISION.
+       LINKAGE SECTION.
+       01 LS-A   PIC 9(3).
+       01 LS-B   PIC 9(3).
+       01 LS-RES PIC 9(4).
+
+       PROCEDURE DIVISION USING LS-A LS-B LS-RES.
+           ADD LS-A LS-B GIVING LS-RES
+           GOBACK.
